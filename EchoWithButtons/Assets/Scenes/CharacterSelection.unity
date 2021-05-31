@@ -187,7 +187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &108522807
 GameObject:
@@ -454,10 +454,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1181211719}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &511553148
 GameObject:
@@ -471,6 +470,7 @@ GameObject:
   - component: {fileID: 511553152}
   - component: {fileID: 511553151}
   - component: {fileID: 511553150}
+  - component: {fileID: 511553153}
   m_Layer: 5
   m_Name: Select
   m_TagString: Untagged
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 775225872}
+      - m_Target: {fileID: 1503494893}
         m_TargetAssemblyTypeName: ModelSelection, Assembly-CSharp
         m_MethodName: Select
         m_Mode: 1
@@ -592,6 +592,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511553148}
   m_CullTransparentMesh: 1
+--- !u!95 &511553153
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511553148}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9ae71884b7ee0bb49b33be4f274cc809, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &524037128
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +787,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 775225872}
+      - m_Target: {fileID: 1503494893}
         m_TargetAssemblyTypeName: ModelSelection, Assembly-CSharp
         m_MethodName: Right
         m_Mode: 1
@@ -830,7 +849,6 @@ GameObject:
   - component: {fileID: 775225870}
   - component: {fileID: 775225869}
   - component: {fileID: 775225868}
-  - component: {fileID: 775225872}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -867,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -915,26 +933,13 @@ RectTransform:
   - {fileID: 722831746}
   - {fileID: 511553149}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &775225872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775225867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf4f7f86494dc647a58906734790283, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EchoRoot: {fileID: 1181211719}
 --- !u!4 &1181211719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6970338143313821952, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
@@ -1019,6 +1024,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196252638}
   m_CullTransparentMesh: 1
+--- !u!1 &1503494892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1493751086743120979, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
+  m_PrefabInstance: {fileID: 1905215346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1503494893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503494892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abf4f7f86494dc647a58906734790283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EchoRoot: {fileID: 1181211719}
+  models: []
+  index: 0
 --- !u!1 &1732983929
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,19 +1204,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 409611925}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1493751086743120979, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
       propertyPath: m_Name
       value: echoAR
       objectReference: {fileID: 0}
+    - target: {fileID: 1493751086743120979, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
+      propertyPath: m_TagString
+      value: echo
+      objectReference: {fileID: 0}
     - target: {fileID: 2782816026810004250, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
       propertyPath: APIKey
-      value: snowy-wave-4619
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6970338143313821952, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6970338143313821952, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1199,11 +1228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6970338143313821952, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.090498894
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6970338143313821952, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.00021985546
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6970338143313821952, guid: e1d4d8772d02a5a47acd9aa621ae8c34, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1318,7 +1347,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 775225872}
+      - m_Target: {fileID: 1503494893}
         m_TargetAssemblyTypeName: ModelSelection, Assembly-CSharp
         m_MethodName: Left
         m_Mode: 1

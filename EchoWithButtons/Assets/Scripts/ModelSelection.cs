@@ -1,17 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ModelSelection : MonoBehaviour
 {
+    
     [SerializeField]
     private Transform EchoRoot;
     
-    private GameObject[] models;
+    public GameObject[] models;
 
-    private int index;
+    public int index;
     private bool initialized;
     
+    private static ModelSelection instance;
+    private void Awake() {
+        DontDestroyOnLoad(this.gameObject);  
+
+        if (instance == null) {
+            instance = this;
+        } else {
+            Destroy(this.gameObject);
+        }  
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {        
@@ -61,6 +75,9 @@ public class ModelSelection : MonoBehaviour
         behav.Spinning = false;
 
         models[index].transform.rotation = new Quaternion(0, 180f, 0, 0);
+
+        SceneManager.LoadScene("Virtual Button");
+
     }
 
 }

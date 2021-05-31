@@ -27,13 +27,19 @@ public class echoAR : MonoBehaviour
     // echoAR Database
     static public Database dbObject;
 
+
+    private void Awake() {
+        APIKey = InputSaving.APIKey;    
+    }
+
+
     void Start()
     {
         // Debug logs control
         #if UNITY_EDITOR
             Debug.unityLogger.logEnabled = true;
         #else
-            Debug.logger.logEnabled = false;
+            Debug.unityLogger.logEnabled = false;
         #endif
         
         // The echoAR server details

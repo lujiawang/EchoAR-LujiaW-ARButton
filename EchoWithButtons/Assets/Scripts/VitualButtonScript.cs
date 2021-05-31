@@ -9,6 +9,8 @@ public class VitualButtonScript : MonoBehaviour
     VirtualButtonBehaviour vrb;
     AudioSource audioSource;
 
+    private GetModel getModel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +21,14 @@ public class VitualButtonScript : MonoBehaviour
         effects = GetComponentsInChildren<ParticleSystem>();
         
         audioSource = GetComponent<AudioSource>();
+
+        getModel = GetComponent<GetModel>();
     }
 
     public void onButtonPressed(VirtualButtonBehaviour bv)
     {
         effects[Random.Range(0, effects.Length)].Play();
-        audioSource.Play();
+        audioSource.PlayOneShot(getModel.currentBark);
         Debug.Log("button pressed");
     }
 
