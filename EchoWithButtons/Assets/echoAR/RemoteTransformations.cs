@@ -18,6 +18,8 @@ public class RemoteTransformations : MonoBehaviour
     [HideInInspector]
     public Entry entry;
 
+    public bool EchoPos;
+    public bool EchoScale;
     public bool Spinning;
 
     /// <summary>
@@ -46,7 +48,8 @@ public class RemoteTransformations : MonoBehaviour
         }
 
         Spinning = true;
-
+        EchoPos = true;
+        EchoScale = true;
     }
 
     public void Update()
@@ -72,7 +75,9 @@ public class RemoteTransformations : MonoBehaviour
         {
             positionOffest.z = float.Parse(value, CultureInfo.InvariantCulture);
         }
-        this.gameObject.transform.localPosition = initialWorldSpacePosition + positionOffest;
+
+        if (EchoPos)
+            this.gameObject.transform.localPosition = initialWorldSpacePosition + positionOffest;
 
         // Handle spinning
         float speed = 150;
@@ -111,7 +116,8 @@ public class RemoteTransformations : MonoBehaviour
         // Handle Height and Width
         float height = (entry.getAdditionalData() != null && entry.getAdditionalData().TryGetValue("height", out value)) ? float.Parse(value) * 0.01f : 1;
         float width = (entry.getAdditionalData() != null && entry.getAdditionalData().TryGetValue("width", out value)) ? float.Parse(value) * 0.01f : 1;
-        this.gameObject.transform.localScale = initialScale = new Vector3(width, height, height);
+        if (EchoScale)
+            this.gameObject.transform.localScale = initialScale = new Vector3(width, height, height);
 
         // Handle Scale
         float scaleFactor = 1f;
@@ -119,7 +125,8 @@ public class RemoteTransformations : MonoBehaviour
         {
             scaleFactor = float.Parse(value, CultureInfo.InvariantCulture);
         }
-        this.gameObject.transform.localScale = initialScale * scaleFactor;
+        if (EchoScale)
+            this.gameObject.transform.localScale = initialScale * scaleFactor;
 
         // Mute
          bool mute = false;

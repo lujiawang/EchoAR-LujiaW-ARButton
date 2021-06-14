@@ -29,7 +29,8 @@ public class echoAR : MonoBehaviour
 
 
     private void Awake() {
-        APIKey = InputSaving.APIKey;    
+        //if (APIKey == "")
+            APIKey = InputSaving.APIKey;    
     }
 
 

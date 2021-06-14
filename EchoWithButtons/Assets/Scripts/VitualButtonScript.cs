@@ -6,8 +6,8 @@ using Vuforia;
 public class VitualButtonScript : MonoBehaviour
 {
     ParticleSystem[] effects;
-    VirtualButtonBehaviour vrb;
     AudioSource audioSource;
+    VirtualButtonBehaviour vrb;
 
     private GetModel getModel;
 
@@ -19,7 +19,6 @@ public class VitualButtonScript : MonoBehaviour
         vrb.RegisterOnButtonReleased(onButtonReleased);
 
         effects = GetComponentsInChildren<ParticleSystem>();
-        
         audioSource = GetComponent<AudioSource>();
 
         getModel = GetComponent<GetModel>();
@@ -28,7 +27,7 @@ public class VitualButtonScript : MonoBehaviour
     public void onButtonPressed(VirtualButtonBehaviour bv)
     {
         effects[Random.Range(0, effects.Length)].Play();
-        audioSource.PlayOneShot(getModel.currentBark);
+        audioSource.Play();
         Debug.Log("button pressed");
     }
 
@@ -41,6 +40,5 @@ public class VitualButtonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

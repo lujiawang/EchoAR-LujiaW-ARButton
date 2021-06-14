@@ -1,15 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GetModel : MonoBehaviour
 {
 
     private GameObject echoParent;
     private GameObject[] models;
+    private int index;
 
-    [SerializeField]    
-    AudioClip[] barks;
-    public AudioClip currentBark;
+    public Text ModelName;
+
+    private ModelSelection ms;
+    
+    Transform target;
 
     private void Awake()
     {
@@ -18,31 +22,69 @@ public class GetModel : MonoBehaviour
         {
             echoParent.transform.SetParent(this.transform);
             //echoParent.transform.localScale = new Vector3(10f, 10f, 10f);
-            //echoParent.transform.localPosition = new Vector3(0f, 0f, -2f);
+            echoParent.transform.localPosition = new Vector3(0f, 0f, 0f);
         }
     }
 
     public void SetModels()
     {
-        ModelSelection ms = echoParent.GetComponent<ModelSelection>();
-        models = ms.models;
+        if (ms == null){
+            ms = echoParent.GetComponent<ModelSelection>();
+            models = ms.models;
+            index = ms.index;
+            Debug.Log(index);
+        }            
+        
 
-        currentBark = barks[ms.index];
+        //currentName = models[ms.index].name;
 
         for (int i = 0; i < models.Length; i++)
         {
-            if (i != ms.index)
+            if (i != index)
                 models[i].GetComponentInChildren<Renderer>().enabled = false;
             else
+            {
+                RemoteTransformations behav = models[index].GetComponent<RemoteTransformations>();
+                behav.EchoPos = false;
+                behav.EchoScale = false;
+
+                models[i].transform.localPosition = new Vector3(0f, 0f, 0f);
+                models[i].transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+                
                 models[i].GetComponentInChildren<Renderer>().enabled = true;
+                target = models[i].transform;
+                ModelName.text = models[i].name;
+            }
 
         }
     }
 
-    public void ReSelect(){
+
+    public void DisappearModels(){
+        for (int i = 0; i < models.Length; i++)
+        {
+            models[i].GetComponentInChildren<Renderer>().enabled = false;
+            ModelName.text = "target not found";
+        }
+    }
+
+    public void ReSelect()
+    {
         SceneManager.LoadScene("CharacterSelection");
     }
-    public void Quitapp(){
+    public void Quitapp()
+    {
         Application.Quit();
+    }
+
+
+    public void OnDrawGizmosSelected()
+    {
+        if (target != null)
+        {
+            // Draws a blue line from this transform to the target
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position, target.position);
+        }
     }
 }
