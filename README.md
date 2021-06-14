@@ -12,9 +12,10 @@ Simple pet selector and virtual button demo with Unity, Vuforia, and echoAR
 * Import your own Vuforia Database and select your image target.
 
 ## Build & Run
-* [Set the API key](https://docs.echoar.xyz/unity/using-the-sdk) in the `echoAR.cs` script inside the `echoAR\echoAR.prefab` using the the Inspector.
+* [Build the application on your phone](https://docs.echoar.xyz/unity/adding-ar-capabilities#4-build-and-run-the-ar-application).
+* [Set up API key](https://console.echoar.xyz/).
 * [Add the 3D model](https://docs.echoar.xyz/quickstart/add-a-3d-model) - You can either add pets from the echo database or upload your own 3D model in the console.
-* [Build and run the application on your phone](https://docs.echoar.xyz/unity/adding-ar-capabilities#4-build-and-run-the-ar-application).
+* Run Pet Selector On Your Phone.
 
 ## Learn more
 Refer to our [documentation](https://docs.echoar.xyz/unity/) to learn more about how to use Unity and echoAR.
@@ -23,6 +24,12 @@ Refer to our [documentation](https://docs.echoar.xyz/unity/) to learn more about
 Feel free to reach out at [support@echoAR.xyz](mailto:support@echoAR.xyz) or join our [support channel on Slack](https://join.slack.com/t/echoar/shared_invite/enQtNTg4NjI5NjM3OTc1LWU1M2M2MTNlNTM3NGY1YTUxYmY3ZDNjNTc3YjA5M2QyNGZiOTgzMjVmZWZmZmFjNGJjYTcxZjhhNzk3YjNhNjE). 
 
 ## Audio Use
-![FairyMagicWand,wav](https://freesound.org/people/Robinhood76/sounds/342432/)
+[FairyMagicWand](https://freesound.org/people/Robinhood76/sounds/342432/)
 
 ## Screenshots
+[Video Recording](https://youtu.be/NHy91EgM8K8)
+![screenshot](/Screenshots/01.jpg)
+![screenshot](/Screenshots/02.jpg)
+![screenshot](/Screenshots/03.jpg)
+![screenshot](/Screenshots/04.jpg)
+![screenshot](/Screenshots/05.jpg)
