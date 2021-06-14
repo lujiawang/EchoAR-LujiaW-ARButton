@@ -16,7 +16,7 @@ Simple pet selector and virtual button demo with Unity, Vuforia, and echoAR
 * Download and build a [Android apk](/PetSelector2.0.apk)
 * OR [Build the application on your phone](https://docs.echoar.xyz/unity/adding-ar-capabilities#4-build-and-run-the-ar-application).
 * [Set up API key](https://console.echoar.xyz/).
-* [Add the 3D model](https://docs.echoar.xyz/quickstart/add-a-3d-model) - You can either add pets from the echo database or upload your own 3D model in the console.
+* [Add the 3D model](https://docs.echoar.xyz/quickstart/add-a-3d-model) - Add the models from the Models folder to the echoAR console. Personalized models: You can add more pets from the echo database or upload your own 3D model in the console.
 * Run Pet Selector On Your Phone.
 
 ## Learn more
