@@ -28,8 +28,8 @@ Feel free to reach out at [support@echoAR.xyz](mailto:support@echoAR.xyz) or joi
 
 ## Screenshots
 [Video Recording](https://youtu.be/NHy91EgM8K8)
-![screenshot](/Screenshots/01.jpg)
-![screenshot](/Screenshots/02.jpg)
-![screenshot](/Screenshots/03.jpg)
-![screenshot](/Screenshots/04.jpg)
-![screenshot](/Screenshots/05.jpg)
+* * <img src="/Screenshots/01.jpg" width="200">
+* * <img src="/Screenshots/02.jpg" width="200">
+* * <img src="/Screenshots/03.jpg" width="200">
+* * <img src="/Screenshots/04.jpg" width="200">
+* * <img src="/Screenshots/05.jpg" width="200">
