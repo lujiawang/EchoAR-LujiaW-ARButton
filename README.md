@@ -3,16 +3,18 @@ Simple pet selector and virtual button demo with Unity, Vuforia, and echoAR
 
 ## Register
 * Don't have an API key? Make sure to register for FREE at [echoAR](https://console.echoar.xyz/#/auth/register).
-* Check out [Vuforia](https://library.vuforia.com/features/images/image-targets.html) documentation for how to set up an image target
+* Check out Vuforia documentation for [how to set up an image target](https://library.vuforia.com/features/images/image-targets.html) and [how to implement virtual button](https://library.vuforia.com/articles/Solution/How-To-Implement-Virtual-Buttons.html)
 
 ## Modify your Image Target
 * Create a new Unity project.
 * Clone the [EchoAR-LujiaW-PetSelector/EchoWithButtons/](https://github.com/lujiawang/EchoAR-LujiaW-PetSelector/tree/main/EchoWithButtons) sample code.
 * Open the Virtual Button scene under `Scenes\Virtual Button.unity`.
-* Import your own Vuforia Database and select your image target.
+* Import your own Vuforia Database and select your image target on "ImageTarget" object.
+* Select "VirtualButton" object under "ImageTarget", press "T" in the scene window and scale the virtual button size.
 
 ## Build & Run
-* [Build the application on your phone](https://docs.echoar.xyz/unity/adding-ar-capabilities#4-build-and-run-the-ar-application).
+* Download and build a [Android apk](/PetSelector2.0.apk)
+* OR [Build the application on your phone](https://docs.echoar.xyz/unity/adding-ar-capabilities#4-build-and-run-the-ar-application).
 * [Set up API key](https://console.echoar.xyz/).
 * [Add the 3D model](https://docs.echoar.xyz/quickstart/add-a-3d-model) - You can either add pets from the echo database or upload your own 3D model in the console.
 * Run Pet Selector On Your Phone.
